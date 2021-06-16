@@ -1,0 +1,22 @@
+body {
+  background-color: rgb(20, 20, 20);
+  color: white;
+}
+
+.logo {
+  color: red;
+}
+
+.card-color {
+  background-color: rgb(20, 20, 20);
+  border-color: white;
+  cursor: pointer;
+}
+
+.card-color:hover {
+  border-color: red !important;
+}
+
+.row-title {
+  cursor: default;
+}
