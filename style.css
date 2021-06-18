@@ -11,6 +11,11 @@ body {
   background-color: rgb(20, 20, 20);
   border-color: white;
   cursor: pointer;
+  max-width: 20rem;
+}
+
+.thumbnail {
+  height: 10rem;
 }
 
 .card-color:hover {

@@ -32,212 +32,64 @@
         </div>
       </div>
 
-      <div>
-        <tbody data-bind="foreach: movies">
-          <tr>
-            <td data-bind="text: movie().name"></td>
-            <td data-bind="text: movie().director"></td>
-            <td data-bind="text: movie().year"></td>
-          </tr>
-        </tbody>
-      </div>
-
-      <div class="row mt-4">
+      <div class="mt-5">
         <h5 class="row-title">Beliebt auf Mettflix</h5>
-
-        <!-- Start -->
-        <div class="col">
-          <div class="card card-color">
-            <img
-              src="https://m.media-amazon.com/images/S/sgp-catalog-images/region_DE/universum-UNIVERSUMFILM_SNOWDEN_AMAZON-Full-Image_GalleryCover-de-DE-1549361393904.jpg"
-              class="card-img-top"
-            />
-            <div class="card-body">
-              <h6 class="card-title">Snowden</h6>
+        <div class="row mt-2" data-bind="foreach: stats">
+          <!-- Start -->
+          <div class="col">
+            <div class="card card-color">
+              <img
+                data-bind="attr:{src: stat.image}"
+                src=""
+                class="card-img-top thumbnail"
+              />
+              <div class="card-body">
+                <h6 class="card-title" data-bind="text: stat.name"></h6>
+              </div>
             </div>
           </div>
+          <!-- Ende -->
         </div>
-
-        <div class="col">
-          <div class="card card-color">
-            <img
-              src="https://m.media-amazon.com/images/S/sgp-catalog-images/region_DE/universum-UNIVERSUMFILM_SNOWDEN_AMAZON-Full-Image_GalleryCover-de-DE-1549361393904.jpg"
-              class="card-img-top"
-            />
-            <div class="card-body">
-              <h6 class="card-title">Snowden</h6>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card card-color">
-            <img
-              src="https://m.media-amazon.com/images/S/sgp-catalog-images/region_DE/universum-UNIVERSUMFILM_SNOWDEN_AMAZON-Full-Image_GalleryCover-de-DE-1549361393904.jpg"
-              class="card-img-top"
-            />
-            <div class="card-body">
-              <h6 class="card-title">Snowden</h6>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card card-color">
-            <img
-              src="https://m.media-amazon.com/images/S/sgp-catalog-images/region_DE/universum-UNIVERSUMFILM_SNOWDEN_AMAZON-Full-Image_GalleryCover-de-DE-1549361393904.jpg"
-              class="card-img-top"
-            />
-            <div class="card-body">
-              <h6 class="card-title">Snowden</h6>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card card-color">
-            <img
-              src="https://m.media-amazon.com/images/S/sgp-catalog-images/region_DE/universum-UNIVERSUMFILM_SNOWDEN_AMAZON-Full-Image_GalleryCover-de-DE-1549361393904.jpg"
-              class="card-img-top"
-            />
-            <div class="card-body">
-              <h6 class="card-title">Snowden</h6>
-            </div>
-          </div>
-        </div>
-        <!-- Ende -->
       </div>
 
-      <div class="row mt-4">
+      <div class="mt-5">
         <h5 class="row-title">Neu auf Mettflix</h5>
-
-        <!-- Start -->
-        <div class="col">
-          <div class="card card-color">
-            <img
-              src="https://m.media-amazon.com/images/S/sgp-catalog-images/region_DE/universum-UNIVERSUMFILM_SNOWDEN_AMAZON-Full-Image_GalleryCover-de-DE-1549361393904.jpg"
-              class="card-img-top"
-            />
-            <div class="card-body">
-              <h6 class="card-title">Snowden</h6>
+        <div class="row mt-2" data-bind="foreach: stats">
+          <!-- Start -->
+          <div class="col">
+            <div class="card card-color">
+              <img
+                data-bind="attr:{src: stat.image}"
+                src=""
+                class="card-img-top thumbnail"
+              />
+              <div class="card-body">
+                <h6 class="card-title" data-bind="text: stat.name"></h6>
+              </div>
             </div>
           </div>
+          <!-- Ende -->
         </div>
-
-        <div class="col">
-          <div class="card card-color">
-            <img
-              src="https://m.media-amazon.com/images/S/sgp-catalog-images/region_DE/universum-UNIVERSUMFILM_SNOWDEN_AMAZON-Full-Image_GalleryCover-de-DE-1549361393904.jpg"
-              class="card-img-top"
-            />
-            <div class="card-body">
-              <h6 class="card-title">Snowden</h6>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card card-color">
-            <img
-              src="https://m.media-amazon.com/images/S/sgp-catalog-images/region_DE/universum-UNIVERSUMFILM_SNOWDEN_AMAZON-Full-Image_GalleryCover-de-DE-1549361393904.jpg"
-              class="card-img-top"
-            />
-            <div class="card-body">
-              <h6 class="card-title">Snowden</h6>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card card-color">
-            <img
-              src="https://m.media-amazon.com/images/S/sgp-catalog-images/region_DE/universum-UNIVERSUMFILM_SNOWDEN_AMAZON-Full-Image_GalleryCover-de-DE-1549361393904.jpg"
-              class="card-img-top"
-            />
-            <div class="card-body">
-              <h6 class="card-title">Snowden</h6>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card card-color">
-            <img
-              src="https://m.media-amazon.com/images/S/sgp-catalog-images/region_DE/universum-UNIVERSUMFILM_SNOWDEN_AMAZON-Full-Image_GalleryCover-de-DE-1549361393904.jpg"
-              class="card-img-top"
-            />
-            <div class="card-body">
-              <h6 class="card-title">Snowden</h6>
-            </div>
-          </div>
-        </div>
-        <!-- Ende -->
       </div>
 
-      <div class="row mt-4">
+      <div class="mt-5">
         <h5 class="row-title">Nochmal ansehen</h5>
-
-        <!-- Start -->
-        <div class="col">
-          <div class="card card-color">
-            <img
-              src="https://m.media-amazon.com/images/S/sgp-catalog-images/region_DE/universum-UNIVERSUMFILM_SNOWDEN_AMAZON-Full-Image_GalleryCover-de-DE-1549361393904.jpg"
-              class="card-img-top"
-            />
-            <div class="card-body">
-              <h6 class="card-title">Snowden</h6>
+        <div class="row mt-2" data-bind="foreach: stats">
+          <!-- Start -->
+          <div class="col">
+            <div class="card card-color">
+              <img
+                data-bind="attr:{src: stat.image}"
+                src=""
+                class="card-img-top thumbnail"
+              />
+              <div class="card-body">
+                <h6 class="card-title" data-bind="text: stat.name"></h6>
+              </div>
             </div>
           </div>
+          <!-- Ende -->
         </div>
-
-        <div class="col">
-          <div class="card card-color">
-            <img
-              src="https://m.media-amazon.com/images/S/sgp-catalog-images/region_DE/universum-UNIVERSUMFILM_SNOWDEN_AMAZON-Full-Image_GalleryCover-de-DE-1549361393904.jpg"
-              class="card-img-top"
-            />
-            <div class="card-body">
-              <h6 class="card-title">Snowden</h6>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card card-color">
-            <img
-              src="https://m.media-amazon.com/images/S/sgp-catalog-images/region_DE/universum-UNIVERSUMFILM_SNOWDEN_AMAZON-Full-Image_GalleryCover-de-DE-1549361393904.jpg"
-              class="card-img-top"
-            />
-            <div class="card-body">
-              <h6 class="card-title">Snowden</h6>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card card-color">
-            <img
-              src="https://m.media-amazon.com/images/S/sgp-catalog-images/region_DE/universum-UNIVERSUMFILM_SNOWDEN_AMAZON-Full-Image_GalleryCover-de-DE-1549361393904.jpg"
-              class="card-img-top"
-            />
-            <div class="card-body">
-              <h6 class="card-title">Snowden</h6>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card card-color">
-            <img
-              src="https://m.media-amazon.com/images/S/sgp-catalog-images/region_DE/universum-UNIVERSUMFILM_SNOWDEN_AMAZON-Full-Image_GalleryCover-de-DE-1549361393904.jpg"
-              class="card-img-top"
-            />
-            <div class="card-body">
-              <h6 class="card-title">Snowden</h6>
-            </div>
-          </div>
-        </div>
-        <!-- Ende -->
       </div>
     </div>
 
