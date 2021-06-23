@@ -32,66 +32,91 @@
         </div>
       </div>
 
-      <div class="mt-5">
-        <h5 class="row-title">Beliebt auf Mettflix</h5>
-        <div class="row mt-2" data-bind="foreach: stats">
-          <!-- Start -->
-          <div class="col">
-            <div class="card card-color">
-              <img
-                data-bind="attr:{src: stat.image}"
-                src=""
-                class="card-img-top thumbnail"
-              />
-              <div class="card-body">
-                <h6 class="card-title" data-bind="text: stat.name"></h6>
-              </div>
-            </div>
-          </div>
-          <!-- Ende -->
-        </div>
-      </div>
+	  <div data-bind="with: showMoviesOverview">
+		  <div class="mt-5">
+			<h5 class="row-title">Beliebt auf Mettflix</h5>
+			<div class="row mt-2" data-bind="foreach: movies">
+			  <!-- Start -->
+			  <div class="col" data-bind="click: $root.goToMovie">
+				<div class="card card-color">
+				  <img
+					data-bind="attr:{src: stat.image}"
+					src=""
+					class="card-img-top thumbnail"
+				  />
+				  <div class="card-body">
+					<h6 class="card-title" data-bind="text: stat.name">Test: </h6>
+				  </div>
+				</div>
+			  </div>
+			  <!-- Ende -->
+			</div>
+		  </div>
 
-      <div class="mt-5">
-        <h5 class="row-title">Neu auf Mettflix</h5>
-        <div class="row mt-2" data-bind="foreach: stats">
-          <!-- Start -->
-          <div class="col">
-            <div class="card card-color">
-              <img
-                data-bind="attr:{src: stat.image}"
-                src=""
-                class="card-img-top thumbnail"
-              />
-              <div class="card-body">
-                <h6 class="card-title" data-bind="text: stat.name"></h6>
-              </div>
-            </div>
-          </div>
-          <!-- Ende -->
-        </div>
-      </div>
+		  <div class="mt-5">
+			<h5 class="row-title">Neu auf Mettflix</h5>
+			<div class="row mt-2" data-bind="foreach: movies">
+			  <!-- Start -->
+			  <div class="col" data-bind="click: $root.goToMovie">
+				<div class="card card-color">
+				  <img
+					data-bind="attr:{src: stat.image}"
+					src=""
+					class="card-img-top thumbnail"
+				  />
+				  <div class="card-body">
+					<h6 class="card-title" data-bind="text: stat.name"></h6>
+				  </div>
+				</div>
+			  </div>
+			  <!-- Ende -->
+			</div>
+		  </div>
 
-      <div class="mt-5">
-        <h5 class="row-title">Nochmal ansehen</h5>
-        <div class="row mt-2" data-bind="foreach: stats">
-          <!-- Start -->
-          <div class="col">
-            <div class="card card-color">
-              <img
-                data-bind="attr:{src: stat.image}"
-                src=""
-                class="card-img-top thumbnail"
-              />
-              <div class="card-body">
-                <h6 class="card-title" data-bind="text: stat.name"></h6>
-              </div>
-            </div>
-          </div>
-          <!-- Ende -->
-        </div>
-      </div>
-    </div>
+		  <div class="mt-5">
+			<h5 class="row-title">Nochmal ansehen</h5>
+			<div class="row mt-2" data-bind="foreach: movies">
+			  <!-- Start -->
+			  <div class="col"data-bind="click: $root.goToMovie">
+				<div class="card card-color">
+				  <img
+					data-bind="attr:{src: stat.image}"
+					src=""
+					class="card-img-top thumbnail"
+				  />
+				  <div class="card-body">
+					<h6 class="card-title" data-bind="text: stat.name"></h6>
+				  </div>
+				</div>
+			  </div>
+			  <!-- Ende -->
+			</div>
+		  </div>
+	  </div>
+		
+		<!-- Chosen mail -->
+		<div class="col" data-bind="with: chosenMovieData">
+			<div class="card card-color">
+			  <img
+				data-bind="attr:{src: stat.image}"
+				src=""
+				class="card-img-top thumbnail"
+			  />
+			  <div class="card-body">
+				<h3 class="card-title" data-bind="text: stat.name"></h3>
+				<h4 class="card-title">Regisseur: </h4>
+				<p class="card-text" data-bind="text: stat.director"></p>
+				<h4 class="card-title">Erscheinungsjahr:</h4>
+				<p class="card-text" data-bind="text: stat.year"></p>
+				<h4 class="card-title">Darsteller:</h4>
+				<p class="card-text" data-bind="text: stat.actors"></p>
+				<h4 class="card-title">Kurzbeschreibung:</h4>
+				<p class="card-text" data-bind="text: stat.description"></p>
+			  </div>
+			  <a href="#" class="btn btn-primary" data-bind="click: $root.goToMoviesOverview">Zurück</a>
+			</div>
+		</div>
+	</div>
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script
