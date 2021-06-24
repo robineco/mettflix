@@ -25,3 +25,11 @@ body {
 .row-title {
   cursor: default;
 }
+
+.carousel-movie-title {
+  color: black;
+}
+
+.carousel-image {
+  height: 25rem;
+}
