@@ -74,8 +74,8 @@
 			<h5 class="row-title">Beliebt auf Mettflix</h5>
 			<div class="row mt-2" data-bind="foreach: popularMovies">
 			  <!-- Start -->
-			  <div class="col-sm-3 mt-4" data-bind="click: $root.goToMovie">
-				<div class="card card-color">
+			  <div class="col-sm-3 mt-4 zoom" data-bind="click: $root.goToMovie">
+				<div class="card card-color mainCard">
 				  <img
 					data-bind="attr:{src: stat.image}"
 					src=""
@@ -83,6 +83,18 @@
 				  />
 				  <div class="card-body">
 					<h6 class="card-title" data-bind="text: stat.name"></h6>
+				  </div>
+				</div>
+				<div class="card card-color movieInfo" style="display: none">
+				  <div class="card-body">
+					<table>
+						<tr>
+							<td>Erscheinungsjahr:</td>
+							<td data-bind="text: stat.year"></td>
+						</tr>
+					</table>
+					<h6 class="card-title">Kurzbeschreibung:</h6>
+					<p class="card-text" data-bind="text: stat.description"></p>
 				  </div>
 				</div>
 			  </div>
@@ -94,8 +106,8 @@
 			<h5 class="row-title">Neu auf Mettflix</h5>
 			<div class="row mt-2" data-bind="foreach: newMovies">
 			  <!-- Start -->
-			  <div class="col-sm-3 mt-4" data-bind="click: $root.goToMovie">
-				<div class="card card-color">
+			  <div class="col-sm-3 mt-4 zoom" data-bind="click: $root.goToMovie">
+				<div class="card card-color mainCard">
 				  <img
 					data-bind="attr:{src: stat.image}"
 					src=""
@@ -105,17 +117,29 @@
 					<h6 class="card-title" data-bind="text: stat.name"></h6>
 				  </div>
 				</div>
+				<div class="card card-color movieInfo" style="display: none">
+				  <div class="card-body">
+					<table>
+						<tr>
+							<td>Erscheinungsjahr:</td>
+							<td data-bind="text: stat.year"></td>
+						</tr>
+					</table>
+					<h6 class="card-title">Kurzbeschreibung:</h6>
+					<p class="card-text" data-bind="text: stat.description"></p>
+				  </div>
+				</div>
 			  </div>
 			  <!-- Ende -->
 			</div>
 		  </div>
-
+		
 		  <div class="mt-5 mb-5">
 			<h5 class="row-title">Nochmal ansehen</h5>
 			<div class="row mt-2" data-bind="foreach: reviewMovies">
 			  <!-- Start -->
-			  <div class="col-sm-3 mt-4"data-bind="click: $root.goToMovie">
-				<div class="card card-color">
+			  <div class="col-sm-3 mt-4 zoom"data-bind="click: $root.goToMovie">
+				<div class="card card-color mainCard">
 				  <img
 					data-bind="attr:{src: stat.image}"
 					src=""
@@ -123,6 +147,18 @@
 				  />
 				  <div class="card-body">
 					<h6 class="card-title" data-bind="text: stat.name"></h6>
+				  </div>
+				</div>
+				<div class="card card-color movieInfo" style="display: none">
+				  <div class="card-body">
+					<table>
+						<tr>
+							<td>Erscheinungsjahr:</td>
+							<td data-bind="text: stat.year"></td>
+						</tr>
+					</table>
+					<h6 class="card-title">Kurzbeschreibung:</h6>
+					<p class="card-text" data-bind="text: stat.description"></p>
 				  </div>
 				</div>
 			  </div>
@@ -131,7 +167,7 @@
 		  </div>
 	  </div>
 		
-		<!-- Chosen mail -->
+		<!-- Chosen movie -->
 		<div class="col" data-bind="with: chosenMovieData">
 			<div class="card card-color">
 			  <img
@@ -161,6 +197,7 @@
       integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
       crossorigin="anonymous"
     ></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.0/knockout-min.js"></script>
     <script src="script.js"></script>
   </body>

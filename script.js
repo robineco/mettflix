@@ -204,3 +204,7 @@ function vm() {
 
 
 ko.applyBindings(new vm());
+
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
